@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+
+    
+
+        body{
+            background:rgb(255, 255, 255) ;
+            color: #68e0e9;
+            font: normal 19pt Arial;
+
+        } 
+        
+        input {
+            font:normal 18pt Arial;
+            width: 145px;
+
+            
+        }
+
+        
+        div#res{
+            margin-top: 20px;
+        }
+
+        div#res2{
+            margin-top: 20px;
+        }
+
+       div#res3{
+            margin-top: 20px;  
+        }
+
+        div#res4{
+            margin-top: 20px;  
+        }
+        section{
+            background:white;
+            border-radius:10px ;
+            padding: 15px ;
+            width: 700px ;
+            margin: auto;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.371) ;
+        }
+     
+        
+
+
+    </style>
+</head>
+<body>
+   
+    <section>    
+    <h1>Somando Valores</h1>
+    <p id = 'soma' >Soma</p>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="soma" onclick="somar()">
+    <div id = 'res'>Resultado</div>
+    <script>
+        function somar(){
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.querySelector('input#txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML =  `${n1} + ${n2} = <strong>${s}<strong><br/>`
+
+
+
+        }
+        document.write('=-=-=-=-=-=<br/>')
+        a = window.document.querySelector('p#soma')
+        a.style.color = 'red'
+
+    </script>
+
+    <p id = sub>Subtração</p>
+    <input type="number" name="sub1" id="sub1"> -
+    <input type="number" name="sub2" id="sub2">
+    <input type="button" value="subitração" onclick = "sub()">
+    <div id = 'res2'>Resultado</div>
+
+    <script>
+        function sub(){
+            var tn1 = window.document.querySelector('input#sub1') 
+            var tn2 = window.document.querySelector('input#sub2')
+            var res =  window.document.querySelector('div#res2')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 - n2
+            res2.innerHTML =  ` ${n1} - ${n2} = <strong>${s}<strong>`
+
+
+        }
+        document.write('=-=-=-=-=-=<br/>')
+        a = window.document.querySelector('p#sub')
+        a.style.color = 'blue'
+    </script>  
+    <p id = mul>Mutiplicação</p>
+    <input type="number" name="mult1" id="mult1"> x
+    <input type="number" name="mult2" id="mult2">
+    <input type="button" value="Mutiplicação" onclick = "mult()">
+    <div id = 'res3'>Resultado</div>
+      
+  
+    <script>
+        function mult(){
+            var tn1 = window.document.querySelector('input#mult1')
+            var tn2 = window.document.querySelector('input#mult2')
+            var res =  window.document.querySelector('div#res3')
+            var n1 = Number(mult1.value)
+            var n2 = Number(mult2.value)
+            var s = n1*n2
+            res3.innerHTML = ` ${n1} x ${n2} = <strong>${s}<strong><br/>`
+        } 
+        document.write('=-=-=-=-=-=<br/>')
+        a = window.document.querySelector('p#mul')
+        a.style.color = 'orange'
+
+   </script> 
+   
+   <p id = divis>Divisão Inteira!</p>
+    <input type="number" name="div1" id="div1"> x
+    <input type="number" name="div2" id="div2">
+    <input type="button" value="Divisão" onclick = "div()">
+    <div id = 'res4'>Resultado</div>
+    <script>
+         function div(){
+            var tn1 = window.document.querySelector('input#div1')
+            var tn2 = window.document.querySelector('input#div2')
+            var res =  window.document.querySelector('div#res4')
+            var n1 = Number(div1.value)
+            var n2 = Number(div2.value)
+            var s = n1/n2
+            res4.innerHTML = ` ${n1} / ${n2} = <strong>${s}<strong><br/>`
+        } 
+        document.write('=-=-=-=-=-=<br/>')
+        a = window.document.querySelector('p#divis')
+        a.style.color = 'black'
+
+
+
+</script>
+</section> 
+
+</body>
+</html>
